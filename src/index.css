@@ -1,0 +1,146 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom CSS Variables */
+:root {
+  --primary: #6C63FF;
+  --secondary: #A27BFF;
+  --accent: #00E4FF;
+  --dark-bg: #0B0F1A;
+  --dark-surface: #1E1E2E;
+}
+
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--dark-bg);
+  color: #ffffff;
+  overflow-x: hidden;
+}
+
+/* Glassmorphism Utility Classes */
+.glass {
+  background: rgba(255, 255, 255, 0.07);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.glass-card {
+  background: rgba(30, 30, 46, 0.6);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(162, 123, 255, 0.2);
+  border-radius: 16px;
+  transition: all 0.3s ease;
+}
+
+.glass-card:hover {
+  border-color: rgba(162, 123, 255, 0.5);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 40px rgba(108, 99, 255, 0.3);
+}
+
+/* Gradient Backgrounds */
+.gradient-bg {
+  background: linear-gradient(135deg, #0B0F1A 0%, #1E1E2E 50%, #2A1A4A 100%);
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, #6C63FF 0%, #A27BFF 50%, #00E4FF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Neon Glow Effects */
+.glow-primary {
+  box-shadow: 0 0 10px rgba(108, 99, 255, 0.5),
+              0 0 20px rgba(108, 99, 255, 0.3),
+              0 0 30px rgba(108, 99, 255, 0.2);
+}
+
+.glow-accent {
+  box-shadow: 0 0 10px rgba(0, 228, 255, 0.5),
+              0 0 20px rgba(0, 228, 255, 0.3);
+}
+
+/* Button Styles */
+.btn-primary {
+  background: linear-gradient(135deg, #6C63FF, #A27BFF);
+  color: white;
+  padding: 12px 32px;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 20px rgba(108, 99, 255, 0.6),
+              0 0 40px rgba(108, 99, 255, 0.4);
+}
+
+/* Floating Animation */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+.floating {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--dark-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #6C63FF, #A27BFF);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #A27BFF, #6C63FF);
+}
+
+/* Section Padding */
+section {
+  padding: 80px 20px;
+  position: relative;
+}
+
+@media (min-width: 768px) {
+  section {
+    padding: 100px 40px;
+  }
+}
+
+/* Container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
